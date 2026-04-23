@@ -18,7 +18,7 @@
           "max_position": "Maximum position (%)",
           "min_delta": "Minimum position delta (%)",
           "interval_minutes": "Minimum interval (minutes)",
-          "enabled": "Enable automatic control"
+          "enabled": "Enable automatic control",`r`n          "profile_name": "Profile name (optional)"
         }
       }
     }
@@ -41,7 +41,7 @@
           "max_position": "Maximum position (%)",
           "min_delta": "Minimum position delta (%)",
           "interval_minutes": "Minimum interval (minutes)",
-          "enabled": "Enable automatic control"
+          "enabled": "Enable automatic control",`r`n          "profile_name": "Profile name (optional)"
         }
       }
     }

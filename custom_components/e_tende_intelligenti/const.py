@@ -2,9 +2,10 @@
 
 DOMAIN = "e_tende_intelligenti"
 NAME = "e-Tende Intelligenti"
-VERSION = "0.1.6"
+VERSION = "0.1.8"
 
 CONF_COVER_ENTITY = "cover_entity"
+CONF_PROFILE_NAME = "profile_name"
 CONF_WINDOW_AZIMUTH = "window_azimuth"
 CONF_FOV_LEFT = "fov_left"
 CONF_FOV_RIGHT = "fov_right"
@@ -20,5 +21,3 @@ CONF_ENABLED = "enabled"
 
 SERVICE_APPLY_NOW = "apply_now"
 ATTR_ENTRY_ID = "entry_id"
-
-
