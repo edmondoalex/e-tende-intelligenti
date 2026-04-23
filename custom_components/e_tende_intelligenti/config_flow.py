@@ -1,4 +1,4 @@
-﻿"""Config flow for e-Tende Intelligenti."""
+"""Config flow for e-Tende Intelligenti."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ def _schema(defaults: dict[str, Any] | None = None) -> vol.Schema:
     d = defaults or {}
     return vol.Schema(
         {
-            vol.Required(CONF_COVER_ENTITY, default=d.get(CONF_COVER_ENTITY, "cover.")): cv.entity_id,
+            vol.Required(CONF_COVER_ENTITY, default=(d.get(CONF_COVER_ENTITY) or "cover.example")): cv.entity_id,
             vol.Required(CONF_WINDOW_AZIMUTH, default=d.get(CONF_WINDOW_AZIMUTH, 180.0)): vol.Coerce(float),
             vol.Required(CONF_FOV_LEFT, default=d.get(CONF_FOV_LEFT, 70.0)): vol.Coerce(float),
             vol.Required(CONF_FOV_RIGHT, default=d.get(CONF_FOV_RIGHT, 70.0)): vol.Coerce(float),
