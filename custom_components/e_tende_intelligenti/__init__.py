@@ -51,6 +51,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         await payload["controller"].async_stop()
 
     if not hass.data.get(DOMAIN):
-        hass.services.async_remove(DOMAIN, SERVICE_APPLY_NOW)
+        if hass.services.has_service(DOMAIN, SERVICE_APPLY_NOW):
+            hass.services.async_remove(DOMAIN, SERVICE_APPLY_NOW)
 
     return True

@@ -1,4 +1,4 @@
-"""Config flow for e-Tende Intelligenti."""
+﻿"""Config flow for e-Tende Intelligenti."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ from typing import Any
 import voluptuous as vol
 
 from homeassistant import config_entries
+from homeassistant.core import HomeAssistant
 from homeassistant.helpers.selector import selector
 
 from .const import (
@@ -56,14 +57,23 @@ def _as_bool(value: Any, default: bool) -> bool:
     return bool(value)
 
 
-def _schema(defaults: dict[str, Any] | None = None) -> vol.Schema:
+def _cover_default(hass: HomeAssistant, defaults: dict[str, Any]) -> str | None:
+    candidate = defaults.get(CONF_COVER_ENTITY)
+    if not candidate:
+        return None
+    if hass.states.get(candidate) is None:
+        return None
+    return candidate
+
+
+def _schema(hass: HomeAssistant, defaults: dict[str, Any] | None = None) -> vol.Schema:
     """Build config schema with HA selectors."""
     d = defaults or {}
     return vol.Schema(
         {
             vol.Required(
                 CONF_COVER_ENTITY,
-                default=d.get(CONF_COVER_ENTITY),
+                default=_cover_default(hass, d),
             ): selector({"entity": {"domain": "cover"}}),
             vol.Optional(
                 CONF_PROFILE_NAME,
@@ -140,7 +150,7 @@ class ETendeIntelligentiConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 profile_name = st.attributes.get("friendly_name") if st else cover_id
             return self.async_create_entry(title=f"e-Tende {profile_name}", data=user_input)
 
-        return self.async_show_form(step_id="user", data_schema=_schema())
+        return self.async_show_form(step_id="user", data_schema=_schema(self.hass))
 
 
 class ETendeIntelligentiOptionsFlow(config_entries.OptionsFlow):
@@ -155,4 +165,4 @@ class ETendeIntelligentiOptionsFlow(config_entries.OptionsFlow):
             return self.async_create_entry(title="", data=user_input)
 
         current = {**self.config_entry.data, **self.config_entry.options}
-        return self.async_show_form(step_id="init", data_schema=_schema(current))
+        return self.async_show_form(step_id="init", data_schema=_schema(self.hass, current))
