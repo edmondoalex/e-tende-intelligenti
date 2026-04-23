@@ -6,7 +6,8 @@
         "title": "Nuova tapparella gestita",
         "description": "Configura una tapparella con regole basate sul sole.",
         "data": {
-          "cover_entity": "EntitÃ  tapparella",
+          "cover_entity": "Entità tapparella",
+          "profile_name": "Nome profilo (opzionale)",
           "window_azimuth": "Azimut finestra (0-360)",
           "fov_left": "Campo visivo sinistro (gradi)",
           "fov_right": "Campo visivo destro (gradi)",
@@ -18,7 +19,7 @@
           "max_position": "Posizione massima (%)",
           "min_delta": "Delta minimo posizione (%)",
           "interval_minutes": "Intervallo minimo (minuti)",
-          "enabled": "Abilita controllo automatico",`r`n          "profile_name": "Nome profilo (opzionale)"
+          "enabled": "Abilita controllo automatico"
         }
       }
     }
@@ -29,7 +30,8 @@
         "title": "Modifica tapparella gestita",
         "description": "Aggiorna comportamento e soglie della tapparella.",
         "data": {
-          "cover_entity": "EntitÃ  tapparella",
+          "cover_entity": "Entità tapparella",
+          "profile_name": "Nome profilo (opzionale)",
           "window_azimuth": "Azimut finestra (0-360)",
           "fov_left": "Campo visivo sinistro (gradi)",
           "fov_right": "Campo visivo destro (gradi)",
@@ -41,7 +43,7 @@
           "max_position": "Posizione massima (%)",
           "min_delta": "Delta minimo posizione (%)",
           "interval_minutes": "Intervallo minimo (minuti)",
-          "enabled": "Abilita controllo automatico",`r`n          "profile_name": "Nome profilo (opzionale)"
+          "enabled": "Abilita controllo automatico"
         }
       }
     }

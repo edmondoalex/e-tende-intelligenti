@@ -7,6 +7,7 @@
         "description": "Configure one cover with sun-based rules.",
         "data": {
           "cover_entity": "Cover entity",
+          "profile_name": "Profile name (optional)",
           "window_azimuth": "Window azimuth (0-360)",
           "fov_left": "Field of view left (deg)",
           "fov_right": "Field of view right (deg)",
@@ -18,7 +19,7 @@
           "max_position": "Maximum position (%)",
           "min_delta": "Minimum position delta (%)",
           "interval_minutes": "Minimum interval (minutes)",
-          "enabled": "Enable automatic control",`r`n          "profile_name": "Profile name (optional)"
+          "enabled": "Enable automatic control"
         }
       }
     }
@@ -30,6 +31,7 @@
         "description": "Update cover behavior and thresholds.",
         "data": {
           "cover_entity": "Cover entity",
+          "profile_name": "Profile name (optional)",
           "window_azimuth": "Window azimuth (0-360)",
           "fov_left": "Field of view left (deg)",
           "fov_right": "Field of view right (deg)",
@@ -41,7 +43,7 @@
           "max_position": "Maximum position (%)",
           "min_delta": "Minimum position delta (%)",
           "interval_minutes": "Minimum interval (minutes)",
-          "enabled": "Enable automatic control",`r`n          "profile_name": "Profile name (optional)"
+          "enabled": "Enable automatic control"
         }
       }
     }
