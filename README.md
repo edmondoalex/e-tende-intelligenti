@@ -1,34 +1,50 @@
-﻿
+# e-Tende Intelligenti
+
 ![e-Tende Intelligenti](docs/assets/e-tende-intelligenti.png)
 
+Custom integration Home Assistant (HACS) per controllo tapparelle/tende basato sulla posizione del sole, con configurazione semplice per singola cover.
 
-Custom component Home Assistant (HACS) per gestione avanzata tende/tapparelle con logiche adattive, robustezza BUSPRO/Nuki e profili operativi orientati a installazioni reali.
+## Stato attuale
+- Release corrente: `0.1.4`
+- Installazione: HACS (`Integration`)
+- Configurazione: completamente da UI (Config Flow + Options Flow)
+- Persistenza: configurazione + stato runtime minimo persistenti al riavvio
 
-## Stato progetto
-- Versione: `0.1.1`
-- Fase: prima versione funzionale (config flow + controllo sole base)
-- Obiettivo attuale: base installabile + tracking sviluppo
+## Funzioni disponibili (v0.1.4)
+- 1 entry = 1 cover gestita
+- Calcolo posizione target da `sun.sun` (`azimuth` + `elevation`)
+- Finestra angolare con `window_azimuth`, `fov_left`, `fov_right`
+- Range attivo con `min_elevation`, `max_elevation`
+- Posizioni dedicate:
+  - `default_position` (sole non utile)
+  - `sunset_position` (dopo tramonto)
+- Limiti operativi: `min_position`, `max_position`
+- Antirumore: `min_delta` + `interval_minutes`
+- Servizio manuale: `e_tende_intelligenti.apply_now`
 
-## Installazione da HACS
-1. HACS -> Integrations -> menu `...` -> `Custom repositories`
+## Installazione HACS
+1. HACS -> `Integrations` -> menu `...` -> `Custom repositories`
 2. Repository: `https://github.com/edmondoalex/e-tende-intelligenti`
-3. Category: `Integration`
-4. Installare `e-Tende Intelligenti`
-5. Riavviare Home Assistant
+3. Categoria: `Integration`
+4. Installa e seleziona tag più recente (`v0.1.4`)
+5. Riavvia Home Assistant
 
-## Struttura
-- `custom_components/e_tende_intelligenti/` codice integrazione
-- `docs/` note operative
-- `CHANGELOG.md` storico versioni
-- `DEVELOPMENT_LOG.md` diario sviluppo incrementale
-- `DECISIONS.md` decisioni tecniche (ADR light)
-- `ROADMAP.md` piano evolutivo
+## Parametri principali
+- `cover_entity`
+- `window_azimuth`
+- `fov_left` / `fov_right`
+- `min_elevation` / `max_elevation`
+- `default_position` / `sunset_position`
+- `min_position` / `max_position`
+- `min_delta`
+- `interval_minutes`
+- `enabled`
 
-## Note
-Questa versione e un bootstrap tecnico. Le funzionalita applicative (profili sole, bypass sicuro, UI per-singola-cover, anti-rimbalzo) verranno introdotte nei prossimi incrementi.
+## Guida completa
+- [docs/COMPONENT_GUIDE.md](docs/COMPONENT_GUIDE.md)
 
-
-## Guida dettagliata
-- Vedi [docs/COMPONENT_GUIDE.md](docs/COMPONENT_GUIDE.md)
-
-
+## Tracking sviluppo
+- [CHANGELOG.md](CHANGELOG.md)
+- [DEVELOPMENT_LOG.md](DEVELOPMENT_LOG.md)
+- [DECISIONS.md](DECISIONS.md)
+- [ROADMAP.md](ROADMAP.md)

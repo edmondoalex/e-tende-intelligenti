@@ -26,3 +26,4 @@
 - README operativo con istruzioni installazione HACS.
 
 
+

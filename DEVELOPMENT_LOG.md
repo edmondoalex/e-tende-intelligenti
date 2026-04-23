@@ -1,4 +1,8 @@
-﻿# Development Log
+# Development Log
+
+## 2026-04-23 (sessione 5)
+- Aggiornata spiegazione utente (README + guida componente) in coerenza con stato reale release.
+- Preparata release documentale v0.1.4 per allineare HACS/readme.
 
 ## 2026-04-23 (sessione 4)`r`n- Aggiunta icona progetto: `custom_components/e_tende_intelligenti/logo.png`.
 - Richiesta utente: tutto persistente ad ogni riavvio.
@@ -32,5 +36,6 @@
 - Test in HA reale di una entry su cover sala.
 - Aggiunta entita diagnostiche (sun_in_front, target_position, last_apply).
 - Introduzione manual override robusto e profilo BUSPRO-safe.
+
 
 
