@@ -1,0 +1,61 @@
+﻿{
+  "title": "e-Tende Intelligenti",
+  "config": {
+    "step": {
+      "user": {
+        "title": "New managed cover",
+        "description": "Configure one cover with sun-based rules.",
+        "data": {
+          "cover_entity": "Cover entity",
+          "window_azimuth": "Window azimuth (0-360)",
+          "fov_left": "Field of view left (deg)",
+          "fov_right": "Field of view right (deg)",
+          "min_elevation": "Min sun elevation (deg)",
+          "max_elevation": "Max sun elevation (deg)",
+          "default_position": "Default position (%)",
+          "sunset_position": "Position after sunset (%)",
+          "min_position": "Minimum position (%)",
+          "max_position": "Maximum position (%)",
+          "min_delta": "Minimum position delta (%)",
+          "interval_minutes": "Minimum interval (minutes)",
+          "enabled": "Enable automatic control"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Edit managed cover",
+        "description": "Update cover behavior and thresholds.",
+        "data": {
+          "cover_entity": "Cover entity",
+          "window_azimuth": "Window azimuth (0-360)",
+          "fov_left": "Field of view left (deg)",
+          "fov_right": "Field of view right (deg)",
+          "min_elevation": "Min sun elevation (deg)",
+          "max_elevation": "Max sun elevation (deg)",
+          "default_position": "Default position (%)",
+          "sunset_position": "Position after sunset (%)",
+          "min_position": "Minimum position (%)",
+          "max_position": "Maximum position (%)",
+          "min_delta": "Minimum position delta (%)",
+          "interval_minutes": "Minimum interval (minutes)",
+          "enabled": "Enable automatic control"
+        }
+      }
+    }
+  },
+  "services": {
+    "apply_now": {
+      "name": "Apply now",
+      "description": "Compute and apply target position immediately.",
+      "fields": {
+        "entry_id": {
+          "name": "Entry ID",
+          "description": "Optional: apply only to one config entry."
+        }
+      }
+    }
+  }
+}

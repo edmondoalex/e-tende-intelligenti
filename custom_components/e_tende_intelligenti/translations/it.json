@@ -1,0 +1,61 @@
+﻿{
+  "title": "e-Tende Intelligenti",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nuova tapparella gestita",
+        "description": "Configura una tapparella con regole basate sul sole.",
+        "data": {
+          "cover_entity": "Entità tapparella",
+          "window_azimuth": "Azimut finestra (0-360)",
+          "fov_left": "Campo visivo sinistro (gradi)",
+          "fov_right": "Campo visivo destro (gradi)",
+          "min_elevation": "Elevazione minima sole (gradi)",
+          "max_elevation": "Elevazione massima sole (gradi)",
+          "default_position": "Posizione predefinita (%)",
+          "sunset_position": "Posizione dopo tramonto (%)",
+          "min_position": "Posizione minima (%)",
+          "max_position": "Posizione massima (%)",
+          "min_delta": "Delta minimo posizione (%)",
+          "interval_minutes": "Intervallo minimo (minuti)",
+          "enabled": "Abilita controllo automatico"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Modifica tapparella gestita",
+        "description": "Aggiorna comportamento e soglie della tapparella.",
+        "data": {
+          "cover_entity": "Entità tapparella",
+          "window_azimuth": "Azimut finestra (0-360)",
+          "fov_left": "Campo visivo sinistro (gradi)",
+          "fov_right": "Campo visivo destro (gradi)",
+          "min_elevation": "Elevazione minima sole (gradi)",
+          "max_elevation": "Elevazione massima sole (gradi)",
+          "default_position": "Posizione predefinita (%)",
+          "sunset_position": "Posizione dopo tramonto (%)",
+          "min_position": "Posizione minima (%)",
+          "max_position": "Posizione massima (%)",
+          "min_delta": "Delta minimo posizione (%)",
+          "interval_minutes": "Intervallo minimo (minuti)",
+          "enabled": "Abilita controllo automatico"
+        }
+      }
+    }
+  },
+  "services": {
+    "apply_now": {
+      "name": "Applica ora",
+      "description": "Calcola e applica subito la posizione target.",
+      "fields": {
+        "entry_id": {
+          "name": "Entry ID",
+          "description": "Opzionale: applica a una sola config entry."
+        }
+      }
+    }
+  }
+}

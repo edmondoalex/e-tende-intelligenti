@@ -3,8 +3,8 @@
 Custom component Home Assistant (HACS) per gestione avanzata tende/tapparelle con logiche adattive, robustezza BUSPRO/Nuki e profili operativi orientati a installazioni reali.
 
 ## Stato progetto
-- Versione: `0.1.0`
-- Fase: bootstrap repository + struttura HACS
+- Versione: `0.1.1`
+- Fase: prima versione funzionale (config flow + controllo sole base)
 - Obiettivo attuale: base installabile + tracking sviluppo
 
 ## Installazione da HACS
@@ -24,3 +24,8 @@ Custom component Home Assistant (HACS) per gestione avanzata tende/tapparelle co
 
 ## Note
 Questa versione e un bootstrap tecnico. Le funzionalita applicative (profili sole, bypass sicuro, UI per-singola-cover, anti-rimbalzo) verranno introdotte nei prossimi incrementi.
+
+
+## Guida dettagliata
+- Vedi [docs/COMPONENT_GUIDE.md](docs/COMPONENT_GUIDE.md)
+
