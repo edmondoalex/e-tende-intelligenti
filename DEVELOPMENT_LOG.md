@@ -1,17 +1,14 @@
-﻿# Development Log
+# Development Log
+
+## 2026-04-23 (sessione 13)
+- Fix definitivo del 500 su ingranaggio (options flow): rimosso `default=None` dal campo required `cover_entity`.
+- Patch applicata su HA `3.24` e allineata al repository.
 
 ## 2026-04-23 (sessione 12)
-- Applicate fix dirette su HA `192.168.3.24`:
-  - `__init__.py`: rimozione servizio con guardia `has_service`.
-  - `config_flow.py`: default `cover_entity` validato contro stati reali.
-  - `translations/it.json`: JSON e encoding UTF-8 corretti.
-- Verifica su `.storage/core.config_entries`:
-  - entry `01KPXH3EFH4ZE1B97HMCZ8ZKEJ`
-  - cover salvata: `cover.buspro_cover_no_porta_sala_laterale_no`.
-- Allineato repository locale alla stessa versione `0.1.10`.
+- Fix su `3.24`: unload servizio con guardia `has_service`.
+- Correzione JSON/encoding traduzioni.
+- Verifica entry e cover salvata in `.storage/core.config_entries`.
 
-## 2026-04-23 (sessione 11)
-- Hardening options flow e unload servizio.
-
-## 2026-04-23 (sessione 10)
-- Correzione traduzioni JSON.
+## 2026-04-23 (sessioni precedenti)
+- Bootstrap integrazione, config flow, scheduler, persistenza runtime, servizio `apply_now`.
+- Hardening progressivo su flow opzioni e compatibilità HACS.

@@ -1,4 +1,4 @@
-﻿"""Config flow for e-Tende Intelligenti."""
+"""Config flow for e-Tende Intelligenti."""
 
 from __future__ import annotations
 
@@ -66,15 +66,20 @@ def _cover_default(hass: HomeAssistant, defaults: dict[str, Any]) -> str | None:
     return candidate
 
 
+def _cover_required_key(hass: HomeAssistant, defaults: dict[str, Any]) -> vol.Required:
+    """Build required key for cover selector, avoiding invalid default=None."""
+    cover = _cover_default(hass, defaults)
+    if cover is None:
+        return vol.Required(CONF_COVER_ENTITY)
+    return vol.Required(CONF_COVER_ENTITY, default=cover)
+
+
 def _schema(hass: HomeAssistant, defaults: dict[str, Any] | None = None) -> vol.Schema:
     """Build config schema with HA selectors."""
     d = defaults or {}
     return vol.Schema(
         {
-            vol.Required(
-                CONF_COVER_ENTITY,
-                default=_cover_default(hass, d),
-            ): selector({"entity": {"domain": "cover"}}),
+            _cover_required_key(hass, d): selector({"entity": {"domain": "cover"}}),
             vol.Optional(
                 CONF_PROFILE_NAME,
                 default=(d.get(CONF_PROFILE_NAME) or ""),
