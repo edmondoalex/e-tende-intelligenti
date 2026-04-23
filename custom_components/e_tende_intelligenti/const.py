@@ -2,7 +2,7 @@
 
 DOMAIN = "e_tende_intelligenti"
 NAME = "e-Tende Intelligenti"
-VERSION = "0.1.5"
+VERSION = "0.1.6"
 
 CONF_COVER_ENTITY = "cover_entity"
 CONF_WINDOW_AZIMUTH = "window_azimuth"
