@@ -1,0 +1,16 @@
+﻿{
+    "domain":  "e_tende_intelligenti",
+    "name":  "e-Tende Intelligenti",
+    "version":  "0.1.0",
+    "documentation":  "https://github.com/edmondoalex/e-tende-intelligenti",
+    "issue_tracker":  "https://github.com/edmondoalex/e-tende-intelligenti/issues",
+    "codeowners":  [
+                       "@edmondoalex"
+                   ],
+    "iot_class":  "local_push",
+    "integration_type":  "service",
+    "loggers":  [
+                    "custom_components.e_tende_intelligenti"
+                ],
+    "config_flow":  true
+}
