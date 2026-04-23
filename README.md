@@ -1,4 +1,6 @@
-﻿# e-Tende Intelligenti
+﻿
+![e-Tende Intelligenti](docs/assets/e-tende-intelligenti.png)
+
 
 Custom component Home Assistant (HACS) per gestione avanzata tende/tapparelle con logiche adattive, robustezza BUSPRO/Nuki e profili operativi orientati a installazioni reali.
 
@@ -28,4 +30,5 @@ Questa versione e un bootstrap tecnico. Le funzionalita applicative (profili sol
 
 ## Guida dettagliata
 - Vedi [docs/COMPONENT_GUIDE.md](docs/COMPONENT_GUIDE.md)
+
 

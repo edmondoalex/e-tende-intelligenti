@@ -1,6 +1,9 @@
-﻿# Changelog
+## [0.1.3] - 2026-04-23
+### Added
+- Added integration icon assets (logo.png, docs image).
 
-All notable changes to this project will be documented in this file.
+### Changed
+- Bumped integration version to 0.1.3.
 
 ## [0.1.1] - 2026-04-23
 ### Added
@@ -21,4 +24,5 @@ All notable changes to this project will be documented in this file.
 - Scaffold integrazione Home Assistant in `custom_components/e_tende_intelligenti`.
 - File di tracking sviluppo: `DEVELOPMENT_LOG.md`, `DECISIONS.md`, `ROADMAP.md`.
 - README operativo con istruzioni installazione HACS.
+
 

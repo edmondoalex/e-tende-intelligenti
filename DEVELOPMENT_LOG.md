@@ -1,6 +1,6 @@
 ﻿# Development Log
 
-## 2026-04-23 (sessione 3)
+## 2026-04-23 (sessione 4)`r`n- Aggiunta icona progetto: `custom_components/e_tende_intelligenti/logo.png`.
 - Richiesta utente: tutto persistente ad ogni riavvio.
 - Implementata persistenza runtime per entry su Home Assistant Store:
   - `last_target_position`
@@ -32,4 +32,5 @@
 - Test in HA reale di una entry su cover sala.
 - Aggiunta entita diagnostiche (sun_in_front, target_position, last_apply).
 - Introduzione manual override robusto e profilo BUSPRO-safe.
+
 

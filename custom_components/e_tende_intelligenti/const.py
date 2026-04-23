@@ -1,8 +1,8 @@
-﻿"""Constants for e-Tende Intelligenti."""
+"""Constants for e-Tende Intelligenti."""
 
 DOMAIN = "e_tende_intelligenti"
 NAME = "e-Tende Intelligenti"
-VERSION = "0.1.1"
+VERSION = "0.1.3"
 
 CONF_COVER_ENTITY = "cover_entity"
 CONF_WINDOW_AZIMUTH = "window_azimuth"
@@ -20,3 +20,4 @@ CONF_ENABLED = "enabled"
 
 SERVICE_APPLY_NOW = "apply_now"
 ATTR_ENTRY_ID = "entry_id"
+
