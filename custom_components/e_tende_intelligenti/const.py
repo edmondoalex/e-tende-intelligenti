@@ -2,7 +2,7 @@
 
 DOMAIN = "e_tende_intelligenti"
 NAME = "e-Tende Intelligenti"
-VERSION = "0.1.16"
+VERSION = "0.1.17"
 
 CONF_COVER_ENTITY = "cover_entity"
 CONF_PROFILE_NAME = "profile_name"

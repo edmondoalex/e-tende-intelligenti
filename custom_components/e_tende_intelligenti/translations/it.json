@@ -6,20 +6,20 @@
         "title": "Nuova tapparella gestita",
         "description": "Configura una tapparella con regole basate sul sole.",
         "data": {
-          "cover_entity": "Entità tapparella",
-          "profile_name": "Nome profilo (opzionale)",
-          "window_azimuth": "Azimut finestra (0-360)",
-          "fov_left": "Campo visivo sinistro (gradi)",
-          "fov_right": "Campo visivo destro (gradi)",
-          "min_elevation": "Elevazione minima sole (gradi)",
-          "max_elevation": "Elevazione massima sole (gradi)",
-          "default_position": "Posizione predefinita (%)",
-          "sunset_position": "Posizione dopo tramonto (%)",
-          "min_position": "Posizione minima (%)",
-          "max_position": "Posizione massima (%)",
-          "min_delta": "Delta minimo posizione (%)",
-          "interval_minutes": "Intervallo minimo (minuti)",
-          "enabled": "Abilita controllo automatico"
+          "cover_entity": "Entità tapparella da controllare",
+          "profile_name": "Nome identificativo tenda (es. 'Finestra Sala')",
+          "window_azimuth": "Orientamento finestra (Gradi Bussola 0-360°)",
+          "fov_left": "Angolo visuale SINISTRO (Quanti gradi a Sx c'è sole)",
+          "fov_right": "Angolo visuale DESTRO (Quanti gradi a Dx c'è sole)",
+          "min_elevation": "Altezza minima sole (Sotto questa altezza NON chiude)",
+          "max_elevation": "Altezza massima sole (Sopra questa altezza NON chiude)",
+          "default_position": "Posizione di RIPOSO (Quando non c'è sole diretto. Es: 100)",
+          "sunset_position": "Posizione di NOTTE (Dopo il tramonto. Es: 0)",
+          "min_position": "Posizione in PIENO SOLE (Quanto scende per proteggerti. Es: 0)",
+          "max_position": "Impostazione superata (Ignorata)",
+          "min_delta": "Scarto tollerato prima di sforzare il motore (%)",
+          "interval_minutes": "Controllo ogni tot. Minuti",
+          "enabled": "L'automazione decide i movimenti (Sì/No)"
         }
       }
     }
@@ -30,20 +30,20 @@
         "title": "Modifica tapparella gestita",
         "description": "Aggiorna comportamento e soglie della tapparella.",
         "data": {
-          "cover_entity": "Entità tapparella",
-          "profile_name": "Nome profilo (opzionale)",
-          "window_azimuth": "Azimut finestra (0-360)",
-          "fov_left": "Campo visivo sinistro (gradi)",
-          "fov_right": "Campo visivo destro (gradi)",
-          "min_elevation": "Elevazione minima sole (gradi)",
-          "max_elevation": "Elevazione massima sole (gradi)",
-          "default_position": "Posizione predefinita (%)",
-          "sunset_position": "Posizione dopo tramonto (%)",
-          "min_position": "Posizione minima (%)",
-          "max_position": "Posizione massima (%)",
-          "min_delta": "Delta minimo posizione (%)",
-          "interval_minutes": "Intervallo minimo (minuti)",
-          "enabled": "Abilita controllo automatico"
+          "cover_entity": "Entità tapparella da controllare",
+          "profile_name": "Nome identificativo tenda (es. 'Finestra Sala')",
+          "window_azimuth": "Orientamento finestra (Gradi Bussola 0-360°)",
+          "fov_left": "Angolo visuale SINISTRO (Quanti gradi a Sx c'è sole)",
+          "fov_right": "Angolo visuale DESTRO (Quanti gradi a Dx c'è sole)",
+          "min_elevation": "Altezza minima sole (Sotto questa altezza NON chiude)",
+          "max_elevation": "Altezza massima sole (Sopra questa altezza NON chiude)",
+          "default_position": "Posizione di RIPOSO (Quando non c'è sole diretto. Es: 100)",
+          "sunset_position": "Posizione di NOTTE (Dopo il tramonto. Es: 0)",
+          "min_position": "Posizione in PIENO SOLE (Quanto scende per proteggerti. Es: 0)",
+          "max_position": "Impostazione superata (Ignorata)",
+          "min_delta": "Scarto tollerato prima di sforzare il motore (%)",
+          "interval_minutes": "Controllo ogni tot. Minuti",
+          "enabled": "L'automazione decide i movimenti (Sì/No)"
         }
       }
     }
