@@ -1,7 +1,7 @@
 {
     "domain":  "e_tende_intelligenti",
     "name":  "e-Tende Intelligenti",
-    "version":  "0.1.11",
+    "version":  "0.1.12",
     "documentation":  "https://github.com/edmondoalex/e-tende-intelligenti",
     "issue_tracker":  "https://github.com/edmondoalex/e-tende-intelligenti/issues",
     "codeowners":  [

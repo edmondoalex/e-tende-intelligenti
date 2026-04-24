@@ -1,10 +1,11 @@
-﻿"""e-Tende Intelligenti custom integration."""
+"""e-Tende Intelligenti custom integration."""
 
 from __future__ import annotations
 
 from typing import Any
 
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant, ServiceCall
 
 from .const import ATTR_ENTRY_ID, DOMAIN, SERVICE_APPLY_NOW
@@ -38,14 +39,23 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     cfg = build_config(merged)
 
     controller = ETendeCoverController(hass, entry.entry_id, cfg)
-    hass.data[DOMAIN][entry.entry_id] = {"controller": controller}
+    hass.data[DOMAIN][entry.entry_id] = {"controller": controller, "entry": entry}
 
     await controller.async_start()
+    
+    await hass.config_entries.async_forward_entry_setups(
+        entry, [Platform.SWITCH, Platform.SENSOR]
+    )
+
     return True
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
+    unload_ok = await hass.config_entries.async_unload_platforms(
+        entry, [Platform.SWITCH, Platform.SENSOR]
+    )
+
     payload = hass.data.get(DOMAIN, {}).pop(entry.entry_id, None)
     if payload and payload.get("controller"):
         await payload["controller"].async_stop()
@@ -54,4 +64,4 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         if hass.services.has_service(DOMAIN, SERVICE_APPLY_NOW):
             hass.services.async_remove(DOMAIN, SERVICE_APPLY_NOW)
 
-    return True
+    return unload_ok
