@@ -138,17 +138,8 @@ class ETendeCoverController:
         if not in_front or not in_elevation:
             return self._clamp_position(self.cfg.default_position)
 
-        if self.cfg.max_elevation <= self.cfg.min_elevation:
-            return self._clamp_position(self.cfg.min_position)
-
-        ratio = (elevation - self.cfg.min_elevation) / (
-            self.cfg.max_elevation - self.cfg.min_elevation
-        )
-        ratio = max(0.0, min(1.0, ratio))
-
-        # Low sun -> lower position (more closed), high sun -> higher position.
-        value = self.cfg.min_position + ratio * (self.cfg.max_position - self.cfg.min_position)
-        return self._clamp_position(round(value))
+        # Se c'è il sole sulla finestra, la tapparella deve essere tutta chiusa
+        return self._clamp_position(self.cfg.min_position)
 
     def _is_sun_in_front(self, sun_azimuth: float) -> bool:
         """Check if sun is inside the window field-of-view."""
